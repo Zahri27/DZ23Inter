@@ -1,20 +1,33 @@
 // Main.java
 public class Main {
     public static void main(String[] args) {
-        // Создаем экземпляры Androids и iPhones
-        Smartphones AndroidPhone = new Androids();
+
+        Smartphones androidPhone = new Androids();
         Smartphones IPhone = new IPhones();
 
-        // Вызываем методы для Androids
-        AndroidPhone.call();
-        AndroidPhone.sms();
-        AndroidPhone.internet();
-        ((Androids) AndroidPhone).runLinuxCommands();
 
-        // Вызываем методы для iPhones
+        androidPhone.call();
+        androidPhone.sms();
+        androidPhone.internet();
+        ((Androids) androidPhone).runLinuxCommands();
+
+
         IPhone.call();
         IPhone.sms();
         IPhone.internet();
         ((IPhones) IPhone).runIOSApps();
+
+
+        Smartphones androidSmartphone = new Androids();
+        Smartphones iPhoneSmartphone = new IPhones();
+
+
+        androidSmartphone.call();
+        androidSmartphone.sms();
+        androidSmartphone.internet();
+
+        iPhoneSmartphone.call();
+        iPhoneSmartphone.sms();
+        iPhoneSmartphone.internet();
     }
 }
